@@ -100,3 +100,6 @@ alias reload=". ~/.zshrc"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/etrn/.cfg/ --work-tree=/home/etrn'
+alias instances="aws ec2 describe-instances |  jq -r '.Reservations[].Instances[] | [.InstanceId, .PrivateIpAddress, .InstanceName, .PublicIpAddress, .State.Name ]'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
